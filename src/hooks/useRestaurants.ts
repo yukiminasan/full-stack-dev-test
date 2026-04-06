@@ -27,6 +27,7 @@ interface GeoapifyResponse {
 const SEARCH_RADIUS_MILES = 5;
 const SEARCH_RADIUS_METERS = SEARCH_RADIUS_MILES * 1609.344;
 const RESTAURANT_CATEGORIES = "catering.restaurant";
+const COUNTRY_CODE = "ph";
 
 export const useRestaurants = () => {
   const [rows, setRows] = useState<Restaurant[]>([]);
@@ -46,7 +47,8 @@ export const useRestaurants = () => {
 
       try {
         const geocodeQuery = new URLSearchParams({
-          text: location,
+          text: `${location}, Philippines`,
+          filter: `countrycode:${COUNTRY_CODE}`,
           limit: "1",
           apiKey: key,
         });
