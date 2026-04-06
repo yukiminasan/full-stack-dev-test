@@ -22,7 +22,7 @@ export const App = () => {
           Find Restaurants
         </h1>
         <p className="mt-2 text-sm text-app-text">
-          Search any city or area to see nearby restaurants.
+          Search any city to see nearby restaurants.
         </p>
         <div className="mt-5">
         <input
