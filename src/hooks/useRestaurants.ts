@@ -49,6 +49,7 @@ export const useRestaurants = () => {
         const geocodeQuery = new URLSearchParams({
           text: `${location}, Philippines`,
           filter: `countrycode:${COUNTRY_CODE}`,
+          type: "city",
           limit: "1",
           apiKey: key,
         });
